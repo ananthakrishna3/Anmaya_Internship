@@ -31,7 +31,7 @@ module bram(
     
     always @(posedge clk) begin
     if(we) begin
-    mem[addr]=din;
+        mem[addr]<=din;
     end
     end
     assign dout = mem[addr];
